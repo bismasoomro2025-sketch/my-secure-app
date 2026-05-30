@@ -32,3 +32,22 @@
 
 ## Result
 All 4 security fixes successfully implemented and tested.
+
+## Week 3 Tasks
+
+### 1. Penetration Testing (Nmap)
+- Nmap scan kiya localhost pe
+- Port 3000 open mila (Express server)
+- Koi unauthorized ports nahi mile
+
+### 2. Winston Logging
+- security.log file ban gayi
+- Register aur login events log ho rahe hain
+- Warnings bhi log ho rahi hain
+
+### 3. Security Checklist
+- Validate all inputs ✅
+- Hash and salt passwords ✅
+- Use JWT authentication ✅
+- Set security headers ✅
+- Enable logging ✅
