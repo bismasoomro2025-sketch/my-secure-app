@@ -2,6 +2,8 @@ const express = require('express');
 const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
 const cors = require('cors');
+const cookieParser = require('cookie-parser');
+const csrf = require('csurf');
 
 const app = express();
 
@@ -26,13 +28,21 @@ const loginLimiter = rateLimit({
 });
 
 app.use(express.json());
+app.use(cookieParser());
+
+const csrfProtection = csrf({ cookie: true });
+
 app.use('/api/', limiter);
 
 app.get('/', (req, res) => {
   res.json({ message: 'Server is running!' });
 });
 
-app.post('/api/login', loginLimiter, (req, res) => {
+app.get('/api/csrf-token', csrfProtection, (req, res) => {
+  res.json({ csrfToken: req.csrfToken() });
+});
+
+app.post('/api/login', loginLimiter, csrfProtection, (req, res) => {
   const { username, password } = req.body;
   if (username === 'admin' && password === 'password123') {
     res.json({ message: 'Login successful!' });
@@ -41,8 +51,8 @@ app.post('/api/login', loginLimiter, (req, res) => {
   }
 });
 
-const PORT = 3000;
+const PORT = 4000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
-  console.log('Security features active: Helmet, CORS, Rate Limiting');
+  console.log('Security features active: Helmet, CORS, Rate Limiting, CSRF Protection');
 });

@@ -1,0 +1,13 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   845  100   800  100    45   144k   8294 --:--:-- --:--:-- --:--:--  165k
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>ForbiddenError: invalid csrf token<br> &nbsp; &nbsp;at csrf (/home/kali/Desktop/security-project/node_modules/csurf/index.js:112:19)<br> &nbsp; &nbsp;at Layer.handleRequest (/home/kali/Desktop/security-project/node_modules/router/lib/layer.js:152:17)<br> &nbsp; &nbsp;at next (/home/kali/Desktop/security-project/node_modules/router/lib/route.js:157:13)<br> &nbsp; &nbsp;at /home/kali/Desktop/security-project/node_modules/express-rate-limit/dist/index.cjs:999:7<br> &nbsp; &nbsp;at process.processTicksAndRejections (node:internal/process/task_queues:104:5)<br> &nbsp; &nbsp;at async /home/kali/Desktop/security-project/node_modules/express-rate-limit/dist/index.cjs:854:5</pre>
+</body>
+</html>
