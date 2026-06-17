@@ -14,7 +14,7 @@
 | A03: Injection | ⚠️ Found & Fixed | SQL Injection in login route — fixed with prepared statements (Week 5) |
 | A04: Insecure Design | ℹ️ Noted | Juice Shop intentionally vulnerable (test app) |
 | A05: Security Misconfiguration | ⚠️ Found | Missing CSP/HSTS/X-Frame-Options on Juice Shop (ZAP, Nikto) |
-| A06: Vulnerable Components | ✅ Checked | npm audit run on dependencies (Task 2) |
+| A06: Vulnerable Components | ⚠️ Found | npm audit revealed 54 vulnerabilities in Juice Shop dependencies (4 low, 21 moderate, 24 high, 5 critical) including lodash (critical), tar (high), ws (high) |
 | A07: Authentication Failures | ⚠️ Found & Fixed | No rate limiting on login originally — fixed with express-rate-limit (Week 4) |
 | A08: Software/Data Integrity Failures | ✅ Mitigated | CSRF protection added with csurf middleware (Week 5) |
 | A09: Security Logging Failures | ⚠️ Partial | Fail2Ban logs failed SSH attempts; app-level logging not extensive |

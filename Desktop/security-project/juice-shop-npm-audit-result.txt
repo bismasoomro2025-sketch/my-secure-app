@@ -1,0 +1,310 @@
+# npm audit report
+
+@tootallnate/once  <2.0.1
+@tootallnate/once vulnerable to Incorrect Control Flow Scoping - https://github.com/advisories/GHSA-vpq2-c234-7xj6
+fix available via `npm audit fix --force`
+Will install sqlite3@6.0.1, which is a breaking change
+node_modules/@tootallnate/once
+  http-proxy-agent  4.0.1
+  Depends on vulnerable versions of @tootallnate/once
+  node_modules/sqlite3/node_modules/http-proxy-agent
+    make-fetch-happen  7.1.1 - 14.0.0
+    Depends on vulnerable versions of cacache
+    Depends on vulnerable versions of http-proxy-agent
+    node_modules/sqlite3/node_modules/make-fetch-happen
+      node-gyp  <=10.3.1
+      Depends on vulnerable versions of make-fetch-happen
+      Depends on vulnerable versions of tar
+      node_modules/sqlite3/node_modules/node-gyp
+        sqlite3  5.0.0 - 5.1.7
+        Depends on vulnerable versions of node-gyp
+        Depends on vulnerable versions of tar
+        node_modules/sqlite3
+
+base64url  <3.0.0
+Severity: moderate
+Out-of-bounds Read in base64url - https://github.com/advisories/GHSA-rvg8-pwq2-xj7q
+fix available via `npm audit fix --force`
+Will install jsonwebtoken@9.0.3, which is a breaking change
+node_modules/base64url
+  jwa  <=1.1.5
+  Depends on vulnerable versions of base64url
+  node_modules/jwa
+    jws  <=3.2.2
+    Depends on vulnerable versions of base64url
+    Depends on vulnerable versions of jwa
+    node_modules/jws
+      jsonwebtoken  <=8.5.1
+      Depends on vulnerable versions of jws
+      Depends on vulnerable versions of moment
+      node_modules/express-jwt/node_modules/jsonwebtoken
+      node_modules/jsonwebtoken
+        express-jwt  <=7.7.7
+        Depends on vulnerable versions of jsonwebtoken
+        node_modules/express-jwt
+
+cookie  <0.7.0
+cookie accepts cookie name, path, and domain with out of bounds characters - https://github.com/advisories/GHSA-pxg6-pf52-xh8x
+fix available via `npm audit fix --force`
+Will install socket.io@4.8.3, which is a breaking change
+node_modules/engine.io/node_modules/cookie
+  engine.io  0.7.8 - 0.7.9 || 1.8.0 - 6.6.1
+  Depends on vulnerable versions of cookie
+  Depends on vulnerable versions of ws
+  node_modules/engine.io
+    socket.io  3.0.0-rc1 - 4.6.1
+    Depends on vulnerable versions of engine.io
+    node_modules/socket.io
+
+crypto-js  <4.2.0
+Severity: critical
+crypto-js PBKDF2 1,000 times weaker than specified in 1993 and 1.3M times weaker than current standard - https://github.com/advisories/GHSA-xwcq-pm8m-c4vf
+fix available via `npm audit fix --force`
+Will install pdfkit@0.19.1, which is a breaking change
+node_modules/crypto-js
+  pdfkit  0.9.0 - 0.12.1
+  Depends on vulnerable versions of crypto-js
+  node_modules/pdfkit
+
+diff  5.0.0 - 5.2.1
+jsdiff has a Denial of Service vulnerability in parsePatch and applyPatch - https://github.com/advisories/GHSA-73rr-hh4g-fpgx
+fix available via `npm audit fix`
+node_modules/diff
+
+
+
+file-type  13.0.0 - 21.3.0
+Severity: moderate
+file-type affected by infinite loop in ASF parser on malformed input with zero-size sub-header - https://github.com/advisories/GHSA-5v7r-6r5c-r473
+fix available via `npm audit fix --force`
+Will install file-type@22.0.1, which is a breaking change
+node_modules/file-type
+
+got  <=11.8.3
+Severity: high
+Got allows a redirect to a UNIX socket - https://github.com/advisories/GHSA-pfrx-2q88-qq97
+Depends on vulnerable versions of cacheable-request
+fix available via `npm audit fix --force`
+Will install download@3.3.0, which is a breaking change
+node_modules/got
+  download  >=4.0.0
+  Depends on vulnerable versions of got
+  node_modules/download
+
+http-cache-semantics  <4.1.1
+Severity: high
+http-cache-semantics vulnerable to Regular Expression Denial of Service - https://github.com/advisories/GHSA-rc47-6667-2j5j
+fix available via `npm audit fix --force`
+Will install download@3.3.0, which is a breaking change
+node_modules/http-cache-semantics
+  cacheable-request  0.1.0 - 2.1.4
+  Depends on vulnerable versions of http-cache-semantics
+  node_modules/cacheable-request
+
+js-yaml  <=4.1.1
+Severity: moderate
+js-yaml has prototype pollution in merge (<<) - https://github.com/advisories/GHSA-mh29-5h37-fv8m
+JS-YAML: Quadratic-complexity DoS in merge key handling via repeated aliases - https://github.com/advisories/GHSA-h67p-54hq-rp68
+fix available via `npm audit fix --force`
+Will install mocha@11.7.6, which is a breaking change
+node_modules/js-yaml
+node_modules/mocha/node_modules/js-yaml
+  @istanbuljs/load-nyc-config  *
+  Depends on vulnerable versions of js-yaml
+  node_modules/@istanbuljs/load-nyc-config
+    nyc  >=15.0.0-alpha.0
+    Depends on vulnerable versions of @istanbuljs/load-nyc-config
+    Depends on vulnerable versions of istanbul-lib-processinfo
+    node_modules/nyc
+      @istanbuljs/nyc-config-typescript  >=1.0.1
+      Depends on vulnerable versions of nyc
+      node_modules/@istanbuljs/nyc-config-typescript
+  grunt  >=0.4.0-a
+  Depends on vulnerable versions of js-yaml
+  node_modules/grunt
+  mocha  5.1.0 - 12.0.0-beta-2
+  Depends on vulnerable versions of diff
+  Depends on vulnerable versions of js-yaml
+  Depends on vulnerable versions of minimatch
+  Depends on vulnerable versions of nanoid
+  Depends on vulnerable versions of serialize-javascript
+  node_modules/mocha
+  yaml-schema-validator  *
+  Depends on vulnerable versions of js-yaml
+  node_modules/yaml-schema-validator
+
+
+
+lodash  <=4.17.23
+Severity: critical
+Prototype Pollution in lodash - https://github.com/advisories/GHSA-fvqr-27wr-82fm
+Command Injection in lodash - https://github.com/advisories/GHSA-35jh-r3h4-6jhm
+Prototype Pollution in lodash - https://github.com/advisories/GHSA-4xc9-xhrj-v574
+Prototype Pollution in lodash - https://github.com/advisories/GHSA-jf85-cpcp-j695
+lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit` - https://github.com/advisories/GHSA-f23m-r3pf-42rh
+fix available via `npm audit fix --force`
+Will install sanitize-html@2.17.5, which is a breaking change
+node_modules/sanitize-html/node_modules/lodash
+  sanitize-html  <=2.12.0
+  Depends on vulnerable versions of lodash
+  node_modules/sanitize-html
+
+lodash.set  *
+Severity: high
+Prototype Pollution in lodash - https://github.com/advisories/GHSA-p6mc-m468-83gw
+No fix available
+node_modules/lodash.set
+  grunt-replace-json  *
+  Depends on vulnerable versions of lodash.set
+  node_modules/grunt-replace-json
+
+marsdb  *
+Severity: critical
+Command Injection in marsdb - https://github.com/advisories/GHSA-5mrr-rgp6-x4gr
+No fix available
+node_modules/marsdb
+
+minimatch  <=3.1.3
+Severity: high
+minimatch ReDoS vulnerability - https://github.com/advisories/GHSA-f8q6-p94x-37v3
+minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern - https://github.com/advisories/GHSA-3ppc-4f35-3m26
+minimatch has ReDoS: matchOne() combinatorial backtracking via multiple non-adjacent GLOBSTAR segments - https://github.com/advisories/GHSA-7r86-cg39-jmmj
+minimatch ReDoS: nested *() extglobs generate catastrophically backtracking regular expressions - https://github.com/advisories/GHSA-23c5-xmqv-rm74
+fix available via `npm audit fix --force`
+Will install mocha@11.7.6, which is a breaking change
+node_modules/mocha/node_modules/minimatch
+node_modules/replace/node_modules/minimatch
+  replace  >=0.2.3
+  Depends on vulnerable versions of minimatch
+  node_modules/replace
+
+moment  <=2.29.1
+Severity: high
+Regular Expression Denial of Service in moment - https://github.com/advisories/GHSA-87vv-r9j6-g5qv
+Regular Expression Denial of Service in moment - https://github.com/advisories/GHSA-446m-mv8f-q348
+Path Traversal: 'dir/../../filename' in moment.locale - https://github.com/advisories/GHSA-8hfj-j24r-96c4
+fix available via `npm audit fix --force`
+Will install jsonwebtoken@9.0.3, which is a breaking change
+node_modules/express-jwt/node_modules/moment
+
+nanoid  <=3.3.7
+Severity: moderate
+Predictable results in nanoid generation when given non-integer values - https://github.com/advisories/GHSA-mwcw-c2x4-8c55
+Exposure of Sensitive Information to an Unauthorized Actor in nanoid - https://github.com/advisories/GHSA-qrpm-p2h7-hrv2
+fix available via `npm audit fix --force`
+Will install mocha@11.7.6, which is a breaking change
+node_modules/nanoid
+
+notevil  *
+Severity: moderate
+Sandbox escape in notevil and argencoders-notevil - https://github.com/advisories/GHSA-8g4m-cjm2-96wq
+No fix available
+node_modules/notevil
+
+parseuri  <2.0.0
+Severity: moderate
+parse-uri Regular expression Denial of Service (ReDoS) - https://github.com/advisories/GHSA-6fx8-h7jm-663j
+fix available via `npm audit fix --force`
+Will install socket.io-client@4.8.3, which is a breaking change
+node_modules/parseuri
+  engine.io-client  0.7.0 || 0.7.8 - 0.7.9 || 1.0.2 - 6.1.1
+  Depends on vulnerable versions of parseuri
+  Depends on vulnerable versions of ws
+  node_modules/engine.io-client
+    socket.io-client  1.0.0-pre - 4.4.1
+    Depends on vulnerable versions of engine.io-client
+    Depends on vulnerable versions of parseuri
+    Depends on vulnerable versions of socket.io-parser
+    node_modules/socket.io-client
+
+qs  6.11.1 - 6.15.1
+Severity: moderate
+qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set - https://github.com/advisories/GHSA-q8mj-m7cp-5q26
+fix available via `npm audit fix --force`
+Will install cypress@15.17.0, which is a breaking change
+node_modules/@cypress/request/node_modules/qs
+  @cypress/request  <=4.0.0
+  Depends on vulnerable versions of qs
+  Depends on vulnerable versions of uuid
+  node_modules/@cypress/request
+    cypress  13.15.0 - 15.14.2
+    Depends on vulnerable versions of @cypress/request
+    node_modules/cypress
+
+
+serialize-javascript  <=7.0.4
+Severity: high
+Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString() - https://github.com/advisories/GHSA-5c6j-r48x-rmvq
+Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects - https://github.com/advisories/GHSA-qj8w-gfj5-8c6v
+fix available via `npm audit fix --force`
+Will install mocha@11.7.6, which is a breaking change
+node_modules/serialize-javascript
+
+
+socket.io-parser  4.0.0 - 4.2.5
+Severity: high
+Insufficient validation when decoding a Socket.IO packet - https://github.com/advisories/GHSA-cqmj-92xf-r6r9
+socket.io allows an unbounded number of binary attachments - https://github.com/advisories/GHSA-677m-j7p3-52f9
+fix available via `npm audit fix --force`
+Will install socket.io-client@4.8.3, which is a breaking change
+node_modules/socket.io-parser
+
+tar  <=7.5.15
+Severity: high
+Denial of service while parsing a tar file due to lack of folders count validation - https://github.com/advisories/GHSA-f5x3-32g6-xq36
+node-tar Vulnerable to Arbitrary File Creation/Overwrite via Hardlink Path Traversal - https://github.com/advisories/GHSA-34x7-hfp2-rc4v
+node-tar is Vulnerable to Arbitrary File Overwrite and Symlink Poisoning via Insufficient Path Sanitization - https://github.com/advisories/GHSA-8qq5-rm4j-mr97
+Arbitrary File Read/Write via Hardlink Target Escape Through Symlink Chain in node-tar Extraction - https://github.com/advisories/GHSA-83g3-92jg-28cx
+tar has Hardlink Path Traversal via Drive-Relative Linkpath - https://github.com/advisories/GHSA-qffp-2rhf-9h96
+node-tar Symlink Path Traversal via Drive-Relative Linkpath - https://github.com/advisories/GHSA-9ppj-qmqm-q256
+Race Condition in node-tar Path Reservations via Unicode Ligature Collisions on macOS APFS - https://github.com/advisories/GHSA-r6q2-hw4h-h46w
+node-tar applies PAX size override to intermediary GNU long-name/long-link headers, causing tar parser interpretation differential (file smuggling) - https://github.com/advisories/GHSA-vmf3-w455-68vh
+fix available via `npm audit fix --force`
+Will install sqlite3@6.0.1, which is a breaking change
+node_modules/node-pre-gyp/node_modules/tar
+node_modules/sqlite3/node_modules/tar
+  cacache  14.0.0 - 18.0.4
+  Depends on vulnerable versions of tar
+  node_modules/sqlite3/node_modules/cacache
+  node-pre-gyp  *
+  Depends on vulnerable versions of tar
+  node_modules/node-pre-gyp
+
+uuid  <11.1.1
+Severity: moderate
+uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided - https://github.com/advisories/GHSA-w5hq-g745-h8pq
+fix available via `npm audit fix --force`
+Will install sequelize@3.30.0, which is a breaking change
+node_modules/uuid
+  istanbul-lib-processinfo  <=3.0.0
+  Depends on vulnerable versions of uuid
+  node_modules/istanbul-lib-processinfo
+  sequelize  0.0.0-development || >=3.30.1
+  Depends on vulnerable versions of uuid
+  node_modules/sequelize
+
+ws  7.0.0 - 7.5.10 || 8.0.0 - 8.20.1
+Severity: high
+ws affected by a DoS when handling a request with many HTTP headers - https://github.com/advisories/GHSA-3h5v-q93c-6h6q
+ws: Uninitialized memory disclosure - https://github.com/advisories/GHSA-58qx-3vcg-4xpx
+ws: Memory exhaustion DoS from tiny fragments and data chunks - https://github.com/advisories/GHSA-96hv-2xvq-fx4p
+ws: Memory exhaustion DoS from tiny fragments and data chunks - https://github.com/advisories/GHSA-96hv-2xvq-fx4p
+fix available via `npm audit fix --force`
+Will install socket.io@4.8.3, which is a breaking change
+node_modules/engine.io-client/node_modules/ws
+node_modules/engine.io/node_modules/ws
+node_modules/ws
+  ethers  >=6.0.0-beta.1
+  Depends on vulnerable versions of ws
+  node_modules/ethers
+
+54 vulnerabilities (4 low, 21 moderate, 24 high, 5 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues possible (including breaking changes), run:
+  npm audit fix --force
+
+Some issues need review, and may require choosing
+a different dependency.
